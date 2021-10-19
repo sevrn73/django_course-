@@ -1,0 +1,48 @@
+<html lang="en" data-lt-installed="true"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Главная</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/app/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta name="theme-color" content="#7952b3">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="/static/app/css/signin.css" rel="stylesheet">
+  </head>
+  <body class="text-center" data-new-gr-c-s-check-loaded="14.1034.0" data-gr-ext-installed="">
+    
+<main class="form-signin">
+
+    <div class="row">
+    <div class="column">
+        <form method="post">
+                {% csrf_token %}
+                {{ main_form.as_p }}
+                <button type="submit">Прогноз</button>
+            </form>
+    </div>
+    <div class="column">
+        {{plot | safe}}
+    </div>
+    </div>
+  </form>
+</main>
